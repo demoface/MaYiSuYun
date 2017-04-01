@@ -45,9 +45,12 @@ public class HuoLaLaAccessibility extends AccessibilityService{
 
                 //判断是否是订单页面
                 if (className.equals(StaticClass.DINGDAN_PACKAGE)){
+                    //TODO 判断是否继续执行
                     queryOrder(info);
                 }else if (className.equals(StaticClass.QIANGDAN_PACKAGE)){
+                    //TODO 判断是否继续执行
                     UtilTools.openPacket("抢单",info);
+
                 }else if (className.equals(StaticClass.DIALOG_APP)){
 
                 }
