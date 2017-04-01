@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mayikeji.mayisuyun">
+
+    <application
+        android:name=".application.BaserApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        //屏幕适配
+        <meta-data
+            android:name="design_width"
+            android:value="1080"></meta-data>
+        <meta-data
+            android:name="design_height"
+            android:value="1920"></meta-data>
+
+        //登陆界面
+        <activity android:name=".ui.LoginActivity">
+
+        </activity>
+
+        //闪屏界面
+        <activity android:name=".ui.SplashActivity"
+            android:theme="@style/NoActivityFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        //主界面
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/Mai_zy"
+            android:launchMode="singleTask">
+
+        </activity>
+
+        //设置页面
+        <activity
+            android:name=".ui.SettingActivity"
+            android:label="@string/Setting_sz"
+            android:launchMode="singleTask">
+
+        </activity>
+    </application>
+
+</manifest>

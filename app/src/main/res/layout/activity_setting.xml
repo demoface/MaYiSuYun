@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e2e2e2">
+
+    <RelativeLayout
+        android:id="@+id/layout_hll"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10px"
+            android:text="货拉拉"
+            android:textSize="40px" />
+
+        <Switch
+            android:id="@+id/sw_hll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView"
+            android:layout_alignBottom="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_yhhd"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_below="@+id/layout_hll"
+        android:layout_marginTop="1.5px"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="一号货的"
+            android:textSize="40px" />
+
+        <Switch
+            android:id="@+id/sw_yhhd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView1"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_58"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_below="@+id/layout_yhhd"
+        android:layout_marginTop="1.5px"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="58速运"
+            android:textSize="40px" />
+
+        <Switch
+            android:id="@+id/sw_58"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView2"
+            android:layout_alignBottom="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/layout_zjs"
+        android:layout_width="match_parent"
+        android:layout_height="120px"
+        android:layout_below="@+id/layout_58"
+        android:layout_marginTop="1.5px"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:text="卓集送"
+            android:textSize="40px" />
+
+        <Switch
+            android:id="@+id/sw_zjs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_price"
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:layout_below="@+id/layout_zjs"
+        android:layout_marginTop="30px"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45px"
+            android:layout_marginTop="25px"
+            android:text="价格区间"
+            android:textSize="50px" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20px"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/min_price"
+                android:layout_width="150px"
+                android:layout_height="80px"
+                android:layout_marginRight="50px"
+                android:background="@drawable/shape_radius"
+                android:gravity="center"
+                android:hint="最低价"
+                android:textSize="30px"
+                android:inputType="number"/>
+
+            <View
+                android:layout_width="30px"
+                android:layout_height="2px"
+                android:layout_gravity="center"
+                android:background="#616161" />
+
+            <EditText
+                android:id="@+id/max_price"
+                android:layout_width="150px"
+                android:layout_height="80px"
+                android:layout_marginLeft="50px"
+                android:background="@drawable/shape_radius"
+                android:gravity="center"
+                android:hint="最高价"
+                android:textSize="30px"
+                android:inputType="number"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_km"
+        android:layout_width="match_parent"
+        android:layout_height="250px"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layout_price"
+        android:layout_marginTop="1.5px"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45px"
+            android:layout_marginTop="30px"
+            android:text="公里区间(km)"
+            android:textSize="50px" />
+
+        <LinearLayout
+            android:id="@+id/layout_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/min_dis"
+                android:layout_width="150px"
+                android:layout_height="80px"
+                android:layout_marginRight="45px"
+                android:background="@drawable/shape_radius"
+                android:gravity="center"
+                android:hint="最低"
+                android:textSize="30px"
+                android:inputType="number"/>
+
+            <View
+                android:layout_width="30px"
+                android:layout_height="2px"
+                android:layout_gravity="center"
+                android:background="#616161" />
+
+            <EditText
+                android:id="@+id/max_dis"
+                android:layout_width="150px"
+                android:layout_height="80px"
+                android:layout_marginLeft="55px"
+                android:background="@drawable/shape_radius"
+                android:gravity="center"
+                android:hint="最高"
+                android:textSize="30px"
+                android:inputType="number"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bzyy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_km"
+        android:layout_marginTop="30px">
+
+        <RelativeLayout
+            android:id="@+id/layout_bz"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_marginTop="1.5px"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/textViewbz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="抢备注订单"
+                android:textSize="40px" />
+
+            <Switch
+                android:id="@+id/sw_bz"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_yy"
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_below="@+id/layout_bz"
+            android:layout_marginTop="1.5px"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/textViewyy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:text="抢预约订单"
+                android:textSize="40px" />
+
+            <Switch
+                android:id="@+id/sw_yy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_bzyy"
+        android:layout_marginTop="20px"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择车型"
+            android:layout_marginLeft="45px"
+            android:textSize="50px"
+            android:layout_marginTop="30px"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="100px"
+            android:id="@+id/layout_cx"
+            android:layout_centerHorizontal="true">
+            <CheckBox
+                android:id="@+id/btn_xm"
+                android:layout_width="180px"
+                android:layout_height="90px"
+                android:text="小面"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginLeft="50px"
+                android:background="#e2e2e2"/>
+
+            <CheckBox
+                android:id="@+id/btn_zm"
+                android:layout_width="180px"
+                android:layout_height="90px"
+                android:text="中面"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginLeft="50px"
+                android:background="#e2e2e2"/>
+
+            <CheckBox
+                android:id="@+id/btn_xh"
+                android:layout_width="180px"
+                android:layout_height="90px"
+                android:text="小货"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginLeft="50px"
+                android:background="#e2e2e2"/>
+
+            <CheckBox
+                android:id="@+id/btn_dh"
+                android:layout_width="180px"
+                android:layout_height="90px"
+                android:text="大货"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_marginLeft="50px"
+                android:layout_marginRight="20px"
+                android:background="#e2e2e2"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_sub"
+            android:layout_width="700px"
+            android:layout_height="110px"
+            android:background="@drawable/shape_btn_bg"
+            android:text="确定"
+            android:layout_marginBottom="20px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
