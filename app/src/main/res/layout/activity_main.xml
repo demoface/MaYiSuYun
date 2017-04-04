@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="#e2e2e2">
+    android:background="#e2e2e2"
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1100px"
+        android:layout_height="900px"
         android:background="#1da4ed"
         android:clipToPadding="true"
         android:fitsSystemWindows="true">
@@ -19,22 +19,22 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="30px"
-            android:text="开启抢单"
-            android:background="#ffffff"/>
+            android:background="#ffffff"
+            android:text="开启抢单" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/layout_lb"
         android:layout_width="match_parent"
-        android:layout_height="480px"
+        android:layout_height="wrap_content"
         android:clickable="true">
 
         <RelativeLayout
             android:id="@+id/layout_qdjl"
             android:layout_width="match_parent"
             android:layout_height="150px"
-            android:orientation="horizontal"
-            android:background="#ffffff">
+            android:background="#ffffff"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_qd"
@@ -59,10 +59,10 @@
             android:layout_width="match_parent"
             android:layout_height="150px"
             android:layout_below="@+id/layout_qdjl"
-            android:orientation="horizontal"
-            android:clickable="true"
             android:layout_marginTop="1.5px"
-            android:background="#ffffff">
+            android:background="#ffffff"
+            android:clickable="true"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_setting"
@@ -87,10 +87,10 @@
             android:layout_width="match_parent"
             android:layout_height="150px"
             android:layout_below="@+id/layout_setting"
-            android:orientation="horizontal"
-            android:clickable="true"
             android:layout_marginTop="1.5px"
-            android:background="#ffffff">
+            android:background="#ffffff"
+            android:clickable="true"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tv_lx"
@@ -108,8 +108,34 @@
                 android:layout_marginLeft="60px"
                 android:text="使用出现故障,请联系客服处理,点击拨打"
                 android:textSize="9sp" />
-
         </RelativeLayout>
 
+        <RelativeLayout
+            android:id="@+id/layout_hc"
+            android:layout_width="match_parent"
+            android:layout_height="150px"
+            android:layout_below="@+id/layout_lx"
+            android:layout_marginTop="1.5px"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_hc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60px"
+                android:text="清除缓存" />
+
+            <TextView
+                android:id="@+id/tv_qhc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_hc"
+                android:layout_marginLeft="60px"
+                android:text="清除应用程序使用残留"
+                android:textSize="9sp" />
+        </RelativeLayout>
     </RelativeLayout>
 </LinearLayout>
