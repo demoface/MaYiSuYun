@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="450px"
+        app:cardCornerRadius="100px"
+        android:layout_margin="50px">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80px"
+            android:layout_marginTop="30px">
+
+            <TextView
+                android:id="@+id/tv_sj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50px"
+                android:layout_marginTop="50px"
+                android:text="时间："
+                android:textColor="#161616"
+                android:textSize="60px" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tv_sj"
+                android:layout_toRightOf="@+id/tv_sj"
+                android:text="1970-01-01"
+                android:textSize="60px" />
+
+            <TextView
+                android:id="@+id/tv_jg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="价格："
+                android:textSize="60px"
+                android:textColor="#161616"
+                android:layout_below="@+id/tv_sj"
+                android:layout_marginTop="50px"
+                android:layout_marginLeft="50px"/>
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textSize="60px"
+                android:layout_toRightOf="@+id/tv_jg"
+                android:layout_alignBaseline="@+id/tv_jg"/>
+            <TextView
+                android:id="@+id/ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="来源："
+                android:textSize="60px"
+                android:textColor="#161616"
+                android:layout_below="@+id/tv_jg"
+                android:layout_marginLeft="50px"
+                android:layout_marginTop="50px"/>
+            <TextView
+                android:id="@+id/tv_ly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未知"
+                android:layout_toRightOf="@+id/ly"
+                android:layout_alignBaseline="@+id/ly"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

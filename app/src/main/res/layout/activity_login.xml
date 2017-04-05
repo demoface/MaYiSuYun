@@ -4,7 +4,7 @@
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mayikeji.mayisuyun.ui.LoginActivity"
+    tools:context="com.mayikeji.shoujibaidu.ui.LoginActivity"
     android:background="@drawable/shape_jb"
     android:clipToPadding="true"
     android:fitsSystemWindows="true">
@@ -39,7 +39,7 @@
             android:textColor="#ffffff"
             android:layout_centerHorizontal="true"
             android:textColorHint="#ffffff"
-            android:inputType="numberPassword"/>
+            android:inputType="textPassword"/>
 
         <Button
             android:id="@+id/btn_dl"
