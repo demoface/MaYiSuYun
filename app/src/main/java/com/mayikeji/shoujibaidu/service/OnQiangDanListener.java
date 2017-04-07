@@ -9,6 +9,6 @@ import android.view.accessibility.AccessibilityEvent;
 
 public interface OnQiangDanListener {
     void onBackView() ;
-    void openNotification(AccessibilityEvent event) ;
+    void openNotification(AccessibilityEvent event);
     void onGetOrder() ;
 }

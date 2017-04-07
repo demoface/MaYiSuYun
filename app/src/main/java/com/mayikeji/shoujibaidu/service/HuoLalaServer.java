@@ -57,7 +57,7 @@ public class HuoLalaServer extends QiangDanServer{
                 Log.e("TAG",className);
                 if (className.equals("com.lalamove.huolala.driver.HomeActivity")) {
                     me = false;
-                    SystemClock.sleep(1000);
+                    SystemClock.sleep(500);
                     hasOrder(info);
                 } else if (className.equals("com.lalamove.huolala.OrderDetailActivity")) {
                     if (me)
@@ -76,7 +76,7 @@ public class HuoLalaServer extends QiangDanServer{
                                 Intent intent = new Intent(ClientApplication.getInstance(),ToastActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                 ClientApplication.getInstance().startActivity(intent);
-                                ClientApplication.getInstance().showNotification("蚂蚁抢单王","蚂蚁已经为您代抢到一个订单，已经停止抢单；","完成订单后请及时开启抢单功能。","");
+                                ClientApplication.getInstance().showNotification("您好","已经为您代抢到一个订单，已经停止抢单；","完成订单后请及时开启抢单功能。","");
                             }
                         },1000);
                     }
@@ -86,11 +86,13 @@ public class HuoLalaServer extends QiangDanServer{
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void onEvent(AccessibilityNodeInfo info) {
         hasOrder(info);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void startActivity() {
         if (!isTopActivity(packages)) {
@@ -104,6 +106,7 @@ public class HuoLalaServer extends QiangDanServer{
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public boolean isTop() {
         return isTopActivity(packages);
@@ -147,6 +150,7 @@ public class HuoLalaServer extends QiangDanServer{
         }
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     private int openOrder(AccessibilityNodeInfo i){
         log("检测订单是否符合设定");
         List<AccessibilityNodeInfo> tvPrice = i.findAccessibilityNodeInfosByViewId("com.lalamove.huolala.driver:id/tvPrice");

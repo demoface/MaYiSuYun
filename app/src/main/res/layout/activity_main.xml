@@ -93,7 +93,7 @@
                 android:textSize="9sp" />
         </RelativeLayout>
 
-        <RelativeLayout
+      <!--  <RelativeLayout
             android:id="@+id/layout_lx"
             android:layout_width="match_parent"
             android:layout_height="150px"
@@ -119,13 +119,13 @@
                 android:layout_marginLeft="60px"
                 android:text="使用出现故障,请联系客服处理,点击拨打"
                 android:textSize="9sp" />
-        </RelativeLayout>
+        </RelativeLayout>-->
 
         <RelativeLayout
             android:id="@+id/layout_hc"
             android:layout_width="match_parent"
             android:layout_height="150px"
-            android:layout_below="@+id/layout_lx"
+            android:layout_below="@+id/layout_setting"
             android:layout_marginTop="1.5px"
             android:background="#ffffff"
             android:clickable="true"
@@ -176,5 +176,17 @@
                 android:text="出现未抢单，抢单失败，请点击此处提交错误日志"
                 android:textSize="9sp" />
         </RelativeLayout>
+
     </RelativeLayout>
+
+    <TextView
+        android:layout_below="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="温馨提示：为避免同一时间我们帮您抢到几个订单,造成拒单率的提升，我们在帮您抢到一单后，会自动暂停抢单，您运输完成之后，请记得手动开启抢单模式哦！"
+        android:id="@+id/textView7"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="150px"
+        android:layout_marginRight="30px"
+        android:textColor="#e71d61"/>
 </LinearLayout>

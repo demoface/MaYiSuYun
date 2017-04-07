@@ -19,6 +19,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.mayikeji.shoujibaidu.helper.DbHelper;
 import com.mayikeji.shoujibaidu.utils.MyLog;
 import com.mayikeji.shoujibaidu.R;
 import com.mayikeji.shoujibaidu.application.ClientApplication;
@@ -148,7 +149,7 @@ public class MainActivity extends AutoLayoutActivity implements View.OnClickList
     private void initView() {
         layout_qdjl = (RelativeLayout) findViewById(R.id.layout_qdjl);
         layout_setting = (RelativeLayout) findViewById(R.id.layout_setting);
-        layout_lx = (RelativeLayout) findViewById(R.id.layout_lx);
+       // layout_lx = (RelativeLayout) findViewById(R.id.layout_lx);
         layout_hc = (RelativeLayout) findViewById(R.id.layout_hc);
         layout_error = (RelativeLayout) findViewById(R.id.layout_error);
 
@@ -157,10 +158,13 @@ public class MainActivity extends AutoLayoutActivity implements View.OnClickList
 
         layout_qdjl.setOnClickListener(this);
         layout_setting.setOnClickListener(this);
-        layout_lx.setOnClickListener(this);
+       // layout_lx.setOnClickListener(this);
         layout_hc.setOnClickListener(this);
         layout_error.setOnClickListener(this);
         btn_start.setOnClickListener(this);
+
+        startService(new Intent(MainActivity.this, HuoLalaServer.class));
+        DbHelper.initDb(getApplicationContext());
 
         huoLalaServer = new HuoLalaServer(null);
         yihaoserver = new YiHaoServer(null);
@@ -179,9 +183,9 @@ public class MainActivity extends AutoLayoutActivity implements View.OnClickList
             case R.id.layout_setting:
                 startActivity(new Intent(this, SettingActivity.class));
                 break;
-            case R.id.layout_lx:
+          /*  case R.id.layout_lx:
 
-                break;
+                break;*/
             case R.id.layout_hc:
                 DataCleanManager.clearAllCache(this);
                 Toast.makeText(this,"缓存清理完成！",Toast.LENGTH_SHORT).show();

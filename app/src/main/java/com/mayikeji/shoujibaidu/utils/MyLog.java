@@ -6,7 +6,6 @@ import android.util.Log;
 
 import com.mayikeji.shoujibaidu.application.ClientApplication;
 import com.mayikeji.shoujibaidu.helper.HttpHelper;
-import com.mayikeji.shoujibaidu.utils.OkHttpUtils;
 import com.mayikeji.shoujibaidu.helper.UiHelper;
 
 import java.io.BufferedReader;
@@ -166,7 +165,7 @@ public class MyLog {
                     }
                     Log.e("TAG",data);
                 } catch (Exception e) {
-                    UiHelper.showToast(ClientApplication.getInstance(),"没有日志可以提交了");
+                    UiHelper.showToast(ClientApplication.getInstance(),"暂无日志");
                     e.printStackTrace();
                 }finally {
                     try {

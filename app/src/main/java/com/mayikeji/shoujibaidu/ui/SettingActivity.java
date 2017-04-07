@@ -50,10 +50,10 @@ public class SettingActivity extends AutoLayoutActivity implements View.OnClickL
 
 
         min_price.setText(ShareUtils.getInt(getApplicationContext(), "min_price", 0)+"");
-        max_price.setText(ShareUtils.getInt(getApplicationContext(), "max_price", Integer.MAX_VALUE)+"");
+        max_price.setText(ShareUtils.getInt(getApplicationContext(), "max_price", 999)+"");
 
         min_dis.setText(ShareUtils.getInt(getApplicationContext(), "min_dis", 0)+"");
-        max_dis.setText(ShareUtils.getInt(getApplicationContext(), "max_dis", Integer.MAX_VALUE)+"");
+        max_dis.setText(ShareUtils.getInt(getApplicationContext(), "max_dis", 999)+"");
 
         intent = new Intent(this,MainActivity.class);
     }

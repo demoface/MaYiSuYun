@@ -50,7 +50,7 @@
         //主界面
         <activity
             android:name="com.mayikeji.shoujibaidu.ui.MainActivity"
-            android:label="@string/Mai_zy"
+            android:label="@string/app_name"
             android:launchMode="singleTask">
 
         </activity>

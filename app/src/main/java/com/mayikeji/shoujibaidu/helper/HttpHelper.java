@@ -23,7 +23,7 @@ import okhttp3.FormBody;
 
 public class HttpHelper {
 
-    public static String BaseUrl = "http://mayi.utuiwu.com/" ;//http://mayi.utuiwu.com/index.php/api/app/record_log_new/content/
+    public static String BaseUrl = "http://120.77.180.233/" ;//http://mayi.utuiwu.com/index.php/api/app/record_log_new/content/
 
     private static HttpHelper mInstance = new HttpHelper();
 

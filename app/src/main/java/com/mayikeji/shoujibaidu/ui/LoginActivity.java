@@ -274,9 +274,6 @@ public class LoginActivity extends AutoLayoutActivity implements View.OnClickLis
                         }
                     }
                 });
-
-
-                finish();
                 break;
         }
     }

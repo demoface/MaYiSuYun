@@ -18,7 +18,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="10px"
             android:text="货拉拉"
-            android:textSize="40px" />
+            android:textSize="40px"
+            android:layout_marginLeft="50px"/>
 
         <Switch
             android:id="@+id/sw_hll"
@@ -27,7 +28,8 @@
             android:layout_alignBaseline="@+id/textView"
             android:layout_alignBottom="@+id/textView"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50px"/>
 
     </RelativeLayout>
 
@@ -46,7 +48,8 @@
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:text="一号货的"
-            android:textSize="40px" />
+            android:textSize="40px"
+            android:layout_marginLeft="50px"/>
 
         <Switch
             android:id="@+id/sw_yhhd"
@@ -55,7 +58,8 @@
             android:layout_alignBaseline="@+id/textView1"
             android:layout_alignBottom="@+id/textView1"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50px"/>
 
     </RelativeLayout>
 
@@ -74,7 +78,8 @@
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:text="58速运"
-            android:textSize="40px" />
+            android:textSize="40px"
+            android:layout_marginLeft="50px"/>
 
         <Switch
             android:id="@+id/sw_58"
@@ -83,7 +88,8 @@
             android:layout_alignBaseline="@+id/textView2"
             android:layout_alignBottom="@+id/textView2"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50px"/>
     </RelativeLayout>
 
 
@@ -102,7 +108,8 @@
             android:layout_centerVertical="true"
             android:layout_gravity="center"
             android:text="卓集送"
-            android:textSize="40px" />
+            android:textSize="40px"
+            android:layout_marginLeft="50px"/>
 
         <Switch
             android:id="@+id/sw_zjs"
@@ -111,7 +118,8 @@
             android:layout_alignBaseline="@+id/textView3"
             android:layout_alignBottom="@+id/textView3"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="50px"/>
     </RelativeLayout>
 
     <RelativeLayout
@@ -249,14 +257,16 @@
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
                 android:text="抢备注订单"
-                android:textSize="40px" />
+                android:textSize="40px"
+                android:layout_marginLeft="50px"/>
 
             <Switch
                 android:id="@+id/sw_bz"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50px"/>
         </RelativeLayout>
 
         <RelativeLayout
@@ -274,14 +284,16 @@
                 android:layout_centerVertical="true"
                 android:layout_gravity="center"
                 android:text="抢预约订单"
-                android:textSize="40px" />
+                android:textSize="40px"
+                android:layout_marginLeft="50px"/>
 
             <Switch
                 android:id="@+id/sw_yy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="50px"/>
         </RelativeLayout>
 
     </RelativeLayout>
@@ -355,7 +367,7 @@
             android:layout_height="110px"
             android:background="@drawable/shape_btn_bg"
             android:text="确定"
-            android:layout_marginBottom="20px"
+            android:layout_marginBottom="80px"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
