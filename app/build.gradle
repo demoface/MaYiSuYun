@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "com.shouji.shoujibaidu"
-        minSdkVersion 15
+        minSdkVersion 18
         targetSdkVersion 25
         versionCode 40
         versionName "4.0"

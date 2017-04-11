@@ -50,7 +50,6 @@
         //主界面
         <activity
             android:name="com.mayikeji.shoujibaidu.ui.MainActivity"
-            android:label="@string/app_name"
             android:launchMode="singleTask">
 
         </activity>
@@ -63,9 +62,12 @@
 
         </activity>
 
-        <activity android:name="com.mayikeji.shoujibaidu.ui.OrderActivity" >
+        //ToastActivity
+        <activity android:name="com.mayikeji.shoujibaidu.ui.ToastActivity"/>
 
-        </activity>
+        //order
+        <activity android:name="com.mayikeji.shoujibaidu.ui.OrderActivity" />
+
 
         <service
             android:name="com.mayikeji.shoujibaidu.service.BaseServer"
