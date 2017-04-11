@@ -1,13 +1,10 @@
 package com.mayikeji.shoujibaidu.service;
 
-import android.annotation.TargetApi;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
@@ -54,7 +51,6 @@ public class YiHaoServer extends QiangDanServer {
         super(listener);
     }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void dialogOrder(AccessibilityNodeInfo rootInActiveWindow , float realPrice) {
         try {
             List<AccessibilityNodeInfo> qiangdans = rootInActiveWindow.findAccessibilityNodeInfosByViewId(dialog_id_qiangdan);
@@ -97,7 +93,6 @@ public class YiHaoServer extends QiangDanServer {
 
     }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void selectMoney(AccessibilityNodeInfo rootInActiveWindow) {
         try {
             List<AccessibilityNodeInfo> infoprices = rootInActiveWindow.findAccessibilityNodeInfosByViewId(dialog_id_price);
@@ -126,7 +121,6 @@ public class YiHaoServer extends QiangDanServer {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void startQiangdan(AccessibilityNodeInfo rootInActiveWindow) {
         try {
             List<AccessibilityNodeInfo> infoprices = rootInActiveWindow.findAccessibilityNodeInfosByViewId(main_start_qiangdan);
@@ -142,7 +136,6 @@ public class YiHaoServer extends QiangDanServer {
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void onAccessibilityEvent(AccessibilityEvent accessibilityEvent, AccessibilityNodeInfo rootInActiveWindow) {
         int type = accessibilityEvent.getEventType();

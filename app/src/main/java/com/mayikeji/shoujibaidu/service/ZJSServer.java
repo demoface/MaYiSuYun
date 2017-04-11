@@ -1,10 +1,7 @@
 package com.mayikeji.shoujibaidu.service;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
@@ -33,7 +30,6 @@ public class ZJSServer extends QiangDanServer {
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event, AccessibilityNodeInfo info) {
         switch (event.getEventType()){
@@ -56,8 +52,6 @@ public class ZJSServer extends QiangDanServer {
         }
     }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void startActivity() {
         if (!isTopActivity(packages)) {
@@ -76,7 +70,6 @@ public class ZJSServer extends QiangDanServer {
         return isTopActivity(packages);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     public void hasOrder(AccessibilityNodeInfo info){
         List<AccessibilityNodeInfo> infos = info.findAccessibilityNodeInfosByText("马上抢");
         for (AccessibilityNodeInfo i:infos) {

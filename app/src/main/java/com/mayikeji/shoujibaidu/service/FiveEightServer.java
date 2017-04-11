@@ -1,10 +1,7 @@
 package com.mayikeji.shoujibaidu.service;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
@@ -53,7 +50,6 @@ public class FiveEightServer extends QiangDanServer {
         super(listener);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void dontScanOrder(AccessibilityNodeInfo rootInActiveWindow) {
         try{
             List<AccessibilityNodeInfo> infoprices = rootInActiveWindow.findAccessibilityNodeInfosByViewId(order_bukan);
@@ -75,8 +71,6 @@ public class FiveEightServer extends QiangDanServer {
     private void checkOrder(final float realMoney) {
 
         UiHelper.getInstance().postThreadOnMain(new Runnable() {
-            @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
-            @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
             @Override
             public void run() {
                 AccessibilityNodeInfo rootInActiveWindow = BaseServer.mInstance.getRootInActiveWindow();
@@ -85,7 +79,6 @@ public class FiveEightServer extends QiangDanServer {
         } , 1000);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void startOrder(AccessibilityNodeInfo rootInActiveWindow, float realMoney) {
         try{
             List<AccessibilityNodeInfo> infoprices = rootInActiveWindow.findAccessibilityNodeInfosByViewId(order_qiangdan_layout);
@@ -106,7 +99,6 @@ public class FiveEightServer extends QiangDanServer {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void selectOrderMoney(AccessibilityNodeInfo rootInActiveWindow) {
         try {
             List<AccessibilityNodeInfo> infoprices = rootInActiveWindow.findAccessibilityNodeInfosByViewId(order_price);
@@ -135,7 +127,6 @@ public class FiveEightServer extends QiangDanServer {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void selectOrderDis(AccessibilityNodeInfo rootInActiveWindow) {
         try {
             //判断最小值有没有大于0

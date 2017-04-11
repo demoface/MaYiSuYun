@@ -3,9 +3,7 @@ package com.mayikeji.shoujibaidu.service;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.SystemClock;
-import android.support.annotation.RequiresApi;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
@@ -40,7 +38,6 @@ public class HuoLalaServer extends QiangDanServer{
     private void log(String log){
         MyLog.e("HuoLalaServer",log);
     }
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event, AccessibilityNodeInfo info) {
         int type = event.getEventType();
@@ -86,13 +83,11 @@ public class HuoLalaServer extends QiangDanServer{
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void onEvent(AccessibilityNodeInfo info) {
         hasOrder(info);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     @Override
     public void startActivity() {
         if (!isTopActivity(packages)) {
@@ -106,14 +101,12 @@ public class HuoLalaServer extends QiangDanServer{
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public boolean isTop() {
         return isTopActivity(packages);
     }
 
     //com.lalamove.huolala.driver:id/tvCount
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     private void hasOrder(AccessibilityNodeInfo info) {
         log("查找订单");
         if (info != null) {
@@ -150,7 +143,6 @@ public class HuoLalaServer extends QiangDanServer{
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN_MR2)
     private int openOrder(AccessibilityNodeInfo i){
         log("检测订单是否符合设定");
         List<AccessibilityNodeInfo> tvPrice = i.findAccessibilityNodeInfosByViewId("com.lalamove.huolala.driver:id/tvPrice");
@@ -171,8 +163,8 @@ public class HuoLalaServer extends QiangDanServer{
                 return -3;
             }
         }
-        price = 0;
-        dis = 0;
+/*        price = 0;
+        dis = 0;*/
         try {
             String s = tvDistance.get(0).getText().toString();
             log(s);
@@ -225,7 +217,7 @@ public class HuoLalaServer extends QiangDanServer{
      * 查找到
      */
     @SuppressLint("NewApi")
-    private void openPacket(String string, AccessibilityNodeInfo info) {
+    private void    openPacket(String string, AccessibilityNodeInfo info) {
         log("openPacket：" + string);
         if (info != null) {
             List<AccessibilityNodeInfo> list = info

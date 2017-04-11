@@ -7,7 +7,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
@@ -36,7 +35,7 @@ public abstract class QiangDanServer {
     public abstract boolean isTop() ;
     public abstract String getPackageName() ;
     public int[] getPrice() {
-        return new int[]{ShareUtils.getInt(MainActivity.context,"min_price",0), ShareUtils.getInt(MainActivity.context,"max_price",Integer.MAX_VALUE)};
+        return new int[]{ShareUtils.getInt(MainActivity.context,"min_price",0), ShareUtils.getInt(MainActivity.context,"max_price",0)};
     }
 
     public int[] getDis() {
@@ -104,13 +103,11 @@ public abstract class QiangDanServer {
         }
         return false;
     }
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public static String getTopActivityName(){
         AccessibilityNodeInfo rootInActiveWindow = BaseServer.mInstance.getRootInActiveWindow();
         CharSequence className = rootInActiveWindow.getPackageName();
         return className.toString();
     }
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public static boolean isTopActivity(String package_name){
         String topActivityName = getTopActivityName();
         if (topActivityName.contains(package_name)){
