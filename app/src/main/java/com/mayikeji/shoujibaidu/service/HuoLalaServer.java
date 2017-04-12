@@ -163,8 +163,8 @@ public class HuoLalaServer extends QiangDanServer{
                 return -3;
             }
         }
-/*        price = 0;
-        dis = 0;*/
+        price = 0;
+        dis = 0;
         try {
             String s = tvDistance.get(0).getText().toString();
             log(s);
